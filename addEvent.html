@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" href="img/favicon.png" type="image/png">
-        <title>Events Details</title>
+        <title>Add Event</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="vendors/linericon/style.css">
@@ -15,13 +15,16 @@
         <!-- main css -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.css" />
+   
     </head>
-<body onload="aff_pub()">
+<body>
         
     <!--================ Start Header Menu Area =================-->
     <header class="header_area">
         <div class="main_menu">
-            <div class="container" id="container">
+            <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <div class="container">
                         <!-- Brand and toggle get grouped for better mobile display -->
@@ -37,11 +40,11 @@
                                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li> 
                                 <li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li> 
                                 <li class="nav-item"><a class="nav-link" href="causes.html">Causes</a>
-                                <li class="nav-item submenu dropdown active">
+                                <li class="nav-item submenu dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
                                     <ul class="dropdown-menu">
                                         <li class="nav-item"><a class="nav-link" href="events.html">Events</a>
-                                        <li class="nav-item"><a class="nav-link" href="event-details.html">Event Details</a>
+                                        <li class="nav-item"><a class="nav-link" href="event-details.html">Event Details</a> 
                                         <li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
                                     </ul>
                                 </li> 
@@ -52,7 +55,7 @@
                                         <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
                                     </ul>
                                 </li> 
-                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                <li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
                             </ul>
                         </div> 
                     </div>
@@ -62,72 +65,100 @@
     </header>
     <!--================ End Header Menu Area =================-->
         
-    <!--================ Home Banner Area =================-->
+    <!--================Home Banner Area =================-->
     <section class="banner_area">
         <div class="banner_inner d-flex align-items-center">
             <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
             <div class="container">
                 <div class="banner_content text-center">
-                    <h2>Events Details</h2>
-                    <p>Platea nullam nostra laoreet potenti hendrerit laoreet enim nisl</p>
+                    <h2>add your Event</h2>
+                    <p>summon a volunteer to help you </p>
+
                 </div>
             </div>
         </div>
     </section>
-    <!--================ End Home Banner Area =================-->
-
-	<!--================ Start Recent Event Area =================-->
-	<section class="condition-area event-details-area section_gap">
-		<div class="container">
-			<div class="row align-items-center justify-content-center">
-				<div class="col-lg-6 col-md-8 col-sm-10">
-					<div class="condition-left">
-						<img class="img-fluid" src="img/event/event-details.jpg" alt="">
-					</div>
-				</div>
-				<div class="offset-lg-1 col-lg-5">
-					<div class="condition-right">
-						<h2 class="mb-20" id='titre'>
-							Homeless man sues couple
-                            who raised for him
-                        </h2>
-						<p id="description">
-							If you are looking at blank cassettes on the web, you may be very confused at the difference in price You may
-							see some for as low as each. If you are looking at blank cassettes on the web, you may be very confused at the
-							difference in price You may see.
-						</p>
-					
-						<ul>
-							<li>Saturday, 15th September, 2018</li>
-							<li>Rocky beach Church</li>
-							<li>Los Angeles, USA.</li>
-
-                            <li><div class="icon"><i class="fa fa-clock-o" aria-hidden="true" id="dure"></i></div> </div></li>
-						</ul>
-                        <button class="primary_btn " onclick="sendRequest()"> Send Request</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-    <!--================ End Recent Event Area =================-->
-
-	<!--================ Start CTA Area =================-->
-	<div class="cta-area section_gap overlay">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-7">
-					<h1>Become a volunteer</h1>
-					<p>
-						So seed seed green that winged cattle in. Gathering thing made fly you're 
-						divided deep leave on the medicene moved us land years living.
-					</p>
-					<a href="#" class="primary_btn yellow_btn rounded">join with us</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--================ End CTA Area =================-->
+    <!--================End Home Banner Area =================-->
+    
+    <!--================Contact Area =================-->
+    <section class="contact_area section_gap">
+        <div class="container">
+           
+            
+                <div class="col-lg-9 element-wrap " ><form >
+                                    <div class="mt-10">
+                                        <input type="text" id='titre' name="titre" placeholder="titre" onfocus="this.placeholder = ''" onblur="this.placeholder = 'titre'" required class="single-input">
+                                    </div>
+                                    
+                                     <div class="mt-10">
+                                        <input type="date" id ="date" name="date" placeholder="Birth date " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required class="single-input">
+                                    </div>
+                                    <div class="input-group-icon mt-10">
+                                        <div class="icon"><i class="fa fa-thumb-tack" aria-hidden="true"></i></div>
+                                        <input type="text" id='adress' name="address" placeholder="Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Address'" required class="single-input">
+                                    </div>
+                                    <div class="input-group-icon mt-10">
+                                        <div class="icon"><i class="fa fa-plane" aria-hidden="true"></i></div>
+                                        <input type="text" id='city' name="city" placeholder="City" onfocus="this.placeholder = ''" onblur="this.placeholder = 'City , State'" required class="single-input">
+                                    </div>
+                                   <textarea class="single-textarea"  id="description" placeholder="description" onfocus="this.placeholder = ''" onblur="this.placeholder = 'description'" required></textarea>
+                                    <div class=" mt-10">
+                                   
+                                    <div class="default-select" id="default-select">
+                                        <select id="dure">
+                                            <option value="0">--select duration--</option>
+                                            <option value="4">0 to 4 hours</option>
+                                            <option value="8">4 to 8 hours</option>
+                                            <option value="16">2 Days</option>
+                                            <option value="24">3 days </option>
+                                            <option value="48">3 to 6 days</option>
+                                            <option value="112">1 to 2 Weeks</option>
+                                            <option value="200">2 to 4 Weeks</option>
+                                            <option value="1000">more than month</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                    
+                                   
+                                    
+                        </div>  
+                        < <div class="mt-10">
+                                        <input type="file" name="" id="img"  placeholder="Upload"  required class="single-input ">
+                                    </div>
+                        </div>
+                       <br>
+                        <div class="col-md-12 text-center">
+                            <button   onclick="addPub()" class="btn primary_btn btn-lg ">Add Event</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================Contact Area =================-->
+        
+	<!--================ Start Subscribe Area =================-->
+	<div class="container">
+            <div class="subscribe_area">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="d-flex align-items-center">
+                            <h1 class="text-white">Do you have a question?</h1>
+                            <div id="mc_embed_signup">
+                                <form target="_blank"  class="subscribe_form relative">
+                                    <div class="input-group d-flex flex-row">
+                                        <input name="EMAIL" placeholder="Your email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
+                                        <button class="ml-10 primary_btn yellow_btn btn sub-btn rounded">SUBSCRIBE</button>		
+                                    </div>									
+                                    <div class="info"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!--================ End Subscribe Area =================-->
         
     <!--================ Start footer Area  =================-->	
     <footer>
@@ -211,13 +242,47 @@
                 <div class="row d-flex">
                     <p class="col-lg-12 footer-text text-center">
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by 
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                 </div>
             </div>
         </div>
     </footer>
-    <!--================ End footer Area  =================-->  
+    <!--================ End footer Area  =================-->
+    
+    <!--================Contact Success and Error message Area =================-->
+    <div id="success" class="modal modal-message fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fa fa-close"></i>
+                    </button>
+                    <h2>Thank you</h2>
+                    <p>Your message is successfully sent...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals error -->
+    <div id="error" class="modal modal-message fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fa fa-close"></i>
+                    </button>
+                    <h2>Sorry !</h2>
+                    <p> Something went wrong </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--================End Contact Success and Error message Area =================-->
+        
+        
+        
         
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -227,13 +292,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <script src="js/stellar.js"></script>
         <script src="vendors/lightbox/simpleLightbox.min.js"></script>
         <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <!--<script src="js/jquery.ajaxchimp.min.js"></script>-->
         <script src="js/mail-script.js"></script>
+        <!-- contact js -->
+        <script src="js/jquery.form.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/contact.js"></script>
         <!--gmaps Js-->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+       
         <script src="js/gmaps.min.js"></script>
-        <script src="js/theme.js"></script>
+       <!-- <script src="js/theme.js"></script>-->
         <script src="js/scripts.js"></script>
-
     </body>
 </html>
